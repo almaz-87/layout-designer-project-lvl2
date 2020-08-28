@@ -1,0 +1,38 @@
+@mixin grid-x ($columns: 12, $gap:0) {
+    .grid-#{$columns} {
+      display: grid;
+      grid-template-columns: repeat($columns, 1fr);
+      grid-column-gap: $gap;
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$i} {
+        grid-column: span $i;
+      }
+    }
+}
+
+@include grid-x(12);
+@include grid-x(2,30px);
+
+.flex{
+  display: flex;
+  align-items: center;
+
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.jc-sa {
+    justify-content: space-around;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+

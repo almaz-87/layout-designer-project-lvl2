@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <title>Портал «Music Box»| abu_maryam</title>
 </head>
 <body>
+    <header class="header uppercase grid-12">
+        <div class="col-2 flex">
+            <img alt="logo" src="images/logo.svg" width="20px">
+            <div class="logo">Music Box</div>
+        </div>
+            <ul class="menu flex col-7">
+                <li class="active">Главная</li>
+                <li>Каталог</li>
+                <li>Исполнители</li>
+                <li>Контакты</li>
+             </ul>
+        <div class="col-3"><input type="search" placeholder="Поиск..." class="search"></div>
+    </header>
+    <main>
+        <div class="banner"></div>
+        <section class="main-banner flex flex-column">
+            <div class="caption-1 uppercase">Онлайн музыка где угодно</div>
+            <div class="caption-2 uppercase">без ограничений</div>
+            <div class="caption-3">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</div>
+            <div class="form grid-2">
+                <input class="col-1" type="text" placeholder="Имя">
+                <input class="col-1" type="text" placeholder="Email">
+            </div>
 
+            <button class="button">Получить доступ</button>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>

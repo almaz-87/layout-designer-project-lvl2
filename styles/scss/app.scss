@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'reset';
+@import 'atomic.scss';
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 0 50px;
+  background: $background;
+  color: $primary;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: bold;
+
+}
+
+.header img {
+    margin-right: 5px;
+}
+
+.menu {
+  li {
+    color: $fourth;
+    margin-right: 50px;
+
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+.search {
+  width: 280px;
+  height: 25px;
+  border-width: 0;
+  border-radius: 50px;
+  background: #3C3B3D;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  padding-left: 15px;
+
+  &::placeholder {
+  color: $secondary;
+  text-transform: uppercase;
+  }
+
+}
+
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  min-width: 100%;
+  height: 100%;
+  background-image: url(../images/banner.png);
+  background-size: 100% auto;
+}
+
+.main-banner {
+  margin-top: 210px;
+}
+
+.caption-1 {
+  font-size: 60px;
+}
+
+.caption-2 {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.caption-3 {
+  margin-top: 45px;
+  font-size: 18px;
+}
+
+.form {
+  margin-top: 40px;
+  width: 570px;
+
+  input {
+    width: 270px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $primary;
+    }
+  }
+}
+
+.button {
+  width: 570px;
+  height: 50px;
+  margin-top: 30px;
+  background: #34C176;
+  font-size: 14px;
+  color: $primary;
+  text-transform: uppercase;
+
+}
+
+@media  {
+  
+}
