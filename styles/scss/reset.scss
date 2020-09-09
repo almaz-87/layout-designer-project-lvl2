@@ -1,15 +1,15 @@
-ul {
+ul,p, h1, h2, h3 {
   padding: 0;
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 

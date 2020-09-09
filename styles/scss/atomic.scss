@@ -1,30 +1,50 @@
-@mixin grid-x ($columns: 12, $gap:0) {
-    .grid-#{$columns} {
-      display: grid;
-      grid-template-columns: repeat($columns, 1fr);
-      grid-column-gap: $gap;
-    }
+/* grid */
 
-    @for $i from 1 through $columns {
-      .col-#{$i} {
-        grid-column: span $i;
-      }
-    }
+@mixin grid-x ($columns: 12, $width:1fr) {
+      display: grid;
+      grid-template-columns: repeat($columns, $width);
 }
 
-@include grid-x(12);
-@include grid-x(2,30px);
+@mixin columns {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include columns;
+
+.grid-12 {
+  @include grid-x(12);
+}
+
+.grid-2 {
+  @include grid-x(2);
+}
+.grid-4 {
+  @include grid-x(4, max-content);
+}
+
+.gap-30 {
+  grid-column-gap: 30px;
+}
+
+.gap-40 {
+  grid-column-gap: 40px;
+}
+
+.gap-100 {
+  grid-column-gap: 100px;
+}
 
 .flex{
   display: flex;
   align-items: center;
+}
 
-  &.jc-sb {
-    justify-content: space-between;
-  }
-  &.jc-sa {
-    justify-content: space-around;
-  }
+.align-normal {
+  align-items: normal;
 }
 
 .flex-column {
@@ -32,7 +52,32 @@
 }
 
 
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+
+
+/* Fonts */
+.bold {
+  font-weight: bold;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
+
+
+
+/* margin-top 5-100 */
+@for $i from 5 through 100 {
+    .mt-#{$i} {
+      margin-top: $i;
+    }
+}
+
 
