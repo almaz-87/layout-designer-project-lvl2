@@ -3,21 +3,25 @@
 <head>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Портал «Music Box»| abu_maryam</title>
 </head>
 <body>
-    <header class="header uppercase grid-12 bold">
-        <div class="col-2 flex">
-            <img alt="logo" src="images/logo.svg" width="20px">
-            <div class="logo">Music Box</div>
+    <header class="header uppercase flex jc-sb bold">
+        <div class="logo flex">
+            <img src="images/logo.svg" width="20px" alt="Logo">
+            <a href="">Music Box</a>
         </div>
-        <ul class="menu flex col-7">
-            <li class="active">Главная</li>
-            <li>Каталог</li>
-            <li>Исполнители</li>
-            <li>Контакты</li>
-         </ul>
-        <div class="col-3">
+
+        <nav class="nav">
+            <ul class="menu flex">
+                <li class="active">Главная</li>
+                <li>Каталог</li>
+                <li>Исполнители</li>
+                <li>Контакты</li>
+            </ul>
+        </nav>
+        <div class="search-form">
             <input type="search" placeholder="Поиск..." class="search">
         </div>
     </header>
@@ -26,13 +30,14 @@
         <div class="banner"></div>
         <h1 class="uppercase">Онлайн музыка где угодно</h1>
         <h3 class="uppercase mt-10">без ограничений</h3>
-        <div class="caption-3">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</div>
-        <div class="form grid-2 gap-30">
+        <div class="caption-3 mt-45">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</div>
+        <div class="form flex jc-c mt-40 gap-30">
             <input class="col-1" type="text" placeholder="Имя">
             <input class="col-1" type="text" placeholder="Email">
+            <button class="button">Получить доступ</button>
         </div>
 
-        <button class="button">Получить доступ</button>
+
     </section>
 
     <main class="main">
@@ -40,7 +45,7 @@
            <h2 class="uppercase bold mt-100">Формы подписки</h2>
             <div class="plans flex jc-sb">
                 <div class="plan subscribe-1 flex flex-column">
-                    <div class="plan-name uppercase">Бесплатная</div>
+                    <div class="plan-name mt-25 uppercase">Бесплатная</div>
                     <div class="price flex">
                         <div class="price-sum">0</div>
                         <div class="currency uppercase">руб.</div>
@@ -49,7 +54,7 @@
                     <div class="subscribe-info">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</div>
                 </div>
                 <div class="plan subscribe-2 flex flex-column">
-                    <div class="plan-name uppercase">Стандартная</div>
+                    <div class="plan-name mt-25 uppercase">Стандартная</div>
                     <div class="price flex">
                         <div class="price-sum">250</div>
                         <div class="currency uppercase">руб.</div>
@@ -58,7 +63,7 @@
                     <div class="subscribe-info">Оплата в месяц. Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве</div>
                 </div>
                 <div class="plan subscribe-3 flex flex-column">
-                    <div class="plan-name uppercase">Премиум</div>
+                    <div class="plan-name mt-25 uppercase">Премиум</div>
                     <div class="price flex">
                         <div class="price-sum">500</div>
                         <div class="currency uppercase">руб.</div>
@@ -67,55 +72,51 @@
                     <div class="subscribe-info">Оплата в месяц. Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве</div>
                 </div>
             </div>
-            <div class="plans-info">На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</div>
+            <div class="plans-info mt-50">На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</div>
         </section>
 
         <section class="latest-news">
             <h2 class="uppercase bold mt-100">Последние новости</h2>
-            <div class="news-item mt-50 grid-2">
-                <div class="news-image col-1"><img src="images/Music%20to%20Be%20Murdered%20By.png"> </div>
-                <div class="news-info col-1">
+            <div class="news-item flex jc-sb flex-wrap mt-50">
+                <div class="news-image"><img src="images/Music%20to%20Be%20Murdered%20By.png" alt="Music to Be Murdered By"> </div>
+                <div class="news-info">
                     <div class="news-title mt-20">Music to Be Murdered By</div>
-                    <div class="news-short">
-                        <p>Новый альбом Eminem «Music to Be Murdered By» уже доступен в нашем сервисе.</p>
-                        <p>На альбоме вас ждёт 20 новых треков.</p>
+                    <div class="news-short mt-25">
+                        <p>Новый альбом Eminem «Music to Be Murdered By» уже доступен в нашем сервисе. На альбоме вас ждёт 20 новых треков.</p>
                     </div>
-                    <div class="news-about grid-4">
-                        <img src="images/avatar.png" alt="Music to Be Murdered By">
-                        <div class="category uppercase">Music box</div>
+                    <div class="news-about mt-20 jc-sb flex">
+                        <div class="category uppercase flex"><img src="images/avatar.png" alt="Music to Be Murdered By"><p>Music box</p></div>
                         <div class="vertical-border"></div>
                         <p class="date uppercase">17/01/2020</p>
                     </div>
-                    <button class="news-button bold uppercase">К альбому</button>
+                    <button class="news-button mt-50 bold uppercase">К альбому</button>
                 </div>
             </div>
 
-            <div class="news-item mt-70 grid-2">
-                <div class="news-info col-1">
+            <div class="news-item flex jc-sb wrap-reverse mt-70">
+                <div class="news-info">
                     <div class="news-title">Ordinary Man</div>
-                    <div class="news-short">
-                        <p>Легенда рока Оззи Озборн спустя 10 лет выпустил новый альбом Ordinary Man.</p>
-                        <p>Слушайте в числе первых на Music Box</p>
+                    <div class="news-short mt-25">
+                        <p>Легенда рока Оззи Озборн спустя 10 лет выпустил новый альбом Ordinary Man. Слушайте в числе первых на Music Box</p>
                     </div>
-                    <div class="news-about grid-4">
-                        <img src="images/avatar.png" alt="Music to Be Murdered By">
-                        <div class="category uppercase">Music box</div>
+                    <div class="news-about mt-20 flex jc-sb">
+                        <div class="category uppercase flex"><img src="images/avatar.png" alt="Music to Be Murdered By"><p>Music box</p></div>
                         <div class="vertical-border"></div>
                         <p class="date uppercase">24/02/2020</p>
                     </div>
-                    <button class="news-button bold uppercase">К альбому</button>
+                    <button class="news-button mt-50 bold uppercase">К альбому</button>
                 </div>
-                <div class="news-image col-1"><img src="images/Ordinary%20Man.png"> </div>
+                <div class="news-image col-1"><img src="images/Ordinary%20Man.png" alt="Ordinary Man"> </div>
             </div>
         </section>
 
         <section class="mobile-app">
             <h2 class="uppercase bold mt-100">Мобильное приложение</h2>
-            <div class="app-download grid-2 mt-50">
+            <div class="app-download flex jc-sb wrap-reverse mt-50">
                 <div class="app-description">
 
                     <p class="mt-30">Воспользуйтесь нашим мобильным приложением. Оно позволит слушать музыку с любого устройства на
-                        базе операционных систем Androind и iOS</p>
+                        базе операционных систем Android и iOS</p>
                     <p class="mt-25">С тарифом «Премиум» приложение позволяет скачивать все композиции из нашей коллекции. Вы можете
                         слушать музыку даже без интернета.</p>
                     <button class="download-button mt-25">Скачать</button>
@@ -127,8 +128,8 @@
 
     <footer class="footer-gradient mt-100">
         <div class="footer-center">
-            <div class="grid-4 gap-100">
-                <div class="col-1">
+            <div class="footer-menu flex gap-100">
+                <div class="col-1 mt-40">
                     <p class="section-name bold">О нас</p>
                     <ul>
                         <li>История компании</li>
@@ -137,7 +138,7 @@
                         <li>Пресса</li>
                     </ul>
                 </div>
-                <div class="col-1">
+                <div class="col-1 mt-40">
                     <p class="section-name bold">Поддержка</p>
                     <ul>
                         <li>База знаний</li>
@@ -146,7 +147,7 @@
                         <li>Условия использования</li>
                     </ul>
                 </div>
-                <div class="col-1">
+                <div class="col-1 mt-40">
                     <p class="section-name  bold">Контакты</p>
                     <ul>
                         <li>hello@music.box</li>
@@ -154,7 +155,7 @@
                         <li>+ 7 499 999 99 99</li>
                     </ul>
                 </div>
-                <div class="col-1">
+                <div class="col-1 mt-40">
                     <p class="section-name  bold"> Подписывайтесь</p>
                     <div class="grid-4 jc-sb">
                         <img src="images/Google+.png" alt="Google+">
@@ -165,12 +166,12 @@
                 </div>
             </div>
             <hr class="footer-line mt-100">
-            <div class="grid-12 gap-40 footer-menu">
-                <p>Магазин</p>
-                <p>Обслуживание</p>
-                <p>Блог</p>
-                <p>Поддержка</p>
-                <p>Контакты</p>
+            <div class="flex gap-40 footer-menu-1">
+                <p class="mt-20">Магазин</p>
+                <p class="mt-20">Обслуживание</p>
+                <p class="mt-20">Блог</p>
+                <p class="mt-20">Поддержка</p>
+                <p class="mt-20">Контакты</p>
             </div>
 
         </div>

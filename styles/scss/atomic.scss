@@ -13,11 +13,15 @@
   }
 }
 
-@include columns;
-
-.grid-12 {
-  @include grid-x(12);
+$maxWidth: 1920;
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
+
+
+@include columns;
 
 .grid-2 {
   @include grid-x(2);
@@ -26,16 +30,15 @@
   @include grid-x(4, max-content);
 }
 
-.gap-30 {
-  grid-column-gap: 30px;
+.grid-12 {
+  @include grid-x(12);
 }
 
-.gap-40 {
-  grid-column-gap: 40px;
-}
-
-.gap-100 {
-  grid-column-gap: 100px;
+/* column-gap 10-100px */
+@for $i from 1 through 10 {
+  .gap-#{$i*10} {
+    grid-column-gap: $i*10px;
+  }
 }
 
 .flex{
@@ -43,14 +46,10 @@
   align-items: center;
 }
 
-.align-normal {
-  align-items: normal;
-}
 
 .flex-column {
   flex-direction: column;
 }
-
 
 .jc-sb {
   justify-content: space-between;
@@ -59,8 +58,21 @@
 .jc-c {
   justify-content: center;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
 
+.align-normal {
+  align-items: normal;
+}
+
+.align-center {
+  align-items: center;
+}
 
 /* Fonts */
 .bold {
@@ -71,12 +83,10 @@
   text-transform: uppercase;
 }
 
-
-
-/* margin-top 5-100 */
-@for $i from 5 through 100 {
-    .mt-#{$i} {
-      margin-top: $i;
+/* margin-top 5-100px */
+@for $i from 1 through 20 {
+    .mt-#{$i*5} {
+      margin-top: $i*5px;
     }
 }
 

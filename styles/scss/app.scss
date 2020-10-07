@@ -5,7 +5,7 @@
 body {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding: 25px 20px 50px;
   background: $background;
   color: $primary;
   font-family: $font-family;
@@ -16,116 +16,153 @@ body {
 }
 
 .header {
-  img {
-    margin-right: 5px;
+  flex-wrap: wrap;
+
+  .logo {
+    flex-basis: 200px;
+    flex-shrink: 1;
+    margin-bottom: 20px;
+
+    img {
+      margin-right: 5px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
   }
-}
 
-.menu {
-  li {
-    color: $fourth;
-    margin-right: 50px;
+  nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 450px;
 
-    &.active {
-      color: $primary;
+    margin-bottom: 20px;
+
+    .menu {
+      flex-wrap: wrap;
+
+      li {
+        color: $fourth;
+        margin-right: 50px;
+
+
+
+        &.active {
+          color: $primary;
+        }
+      }
     }
   }
+ .search-form {
+   margin-bottom: 20px;
+
+   .search {
+     width: 280px;
+     height: 25px;
+     border-width: 0;
+     border-radius: 50px;
+     background: #3C3B3D;
+     transform: matrix(1, 0, 0, 1, 0, 0);
+     padding-left: 15px;
+
+     &::placeholder {
+       color: $secondary;
+       text-transform: uppercase;
+     }
+
+   }
+ }
 }
 
-.search {
-  width: 280px;
-  height: 25px;
-  border-width: 0;
-  border-radius: 50px;
-  background: #3C3B3D;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  padding-left: 15px;
 
-  &::placeholder {
-  color: $secondary;
-  text-transform: uppercase;
-  }
-
-}
-
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  min-width: 100%;
-  height: 877px;
-  background-image: url(../images/banner.png);
-  background-size: cover;
-}
 
 .main-banner {
   margin-top: 210px;
-  margin-bottom: 250px;
-}
+  margin-bottom: 240px;
+  text-align: center;
 
-h1 {
-  font-size: 60px;
-}
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    min-width: 100%;
+    height: 877px;
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
+  }
 
-h2 {
-  font-size: 38px;
-}
+  h1 {
+    @include adaptive-font(60, 30);
+  }
 
-h3 {
-  font-size: 30px;
-}
+  h3 {
+    @include adaptive-font(30, 18);
+  }
 
-.caption-3 {
-  margin-top: 45px;
-  font-size: 18px;
-}
+  .caption-3 {
+    @include adaptive-font(18, 12);
+  }
 
-.form {
-  margin-top: 40px;
-  width: 570px;
+  .form {
+    flex-wrap: wrap;
+    max-width: 570px;
 
-  input {
-    width: 270px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    padding-left: 20px;
-    box-sizing: border-box;
 
-    &::placeholder {
+    input {
+      margin-bottom: 30px;
+      flex-shrink: 1;
+      flex-basis: 270px;
+      flex-grow: 1;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      padding-left: 20px;
+      box-sizing: border-box;
+
+      &::placeholder {
+        font-size: 14px;
+        color: $primary;
+      }
+    }
+
+
+    .button {
+      flex-grow: 1;
+      min-width: 280px;
+      height: 56px;
+      background: #34C176;
       font-size: 14px;
       color: $primary;
+      text-transform: uppercase;
     }
   }
-}
 
-.button {
-  width: 570px;
-  height: 50px;
-  margin-top: 30px;
-  background: #34C176;
-  font-size: 14px;
-  color: $primary;
-  text-transform: uppercase;
 }
-
 
 
 .main {
   height: auto;
 
+  h2 {
+    @include adaptive-font(38, 20);
+  }
+
   .plans {
     width: 100%;
-    margin-top: 50px;
+    flex-wrap: wrap;
 
       .plan {
-        width: 350px;
+        margin-top: 50px;
+
+        flex: 0 1 350px;
+
 
         .plan-name {
-          font-size: 24px;
-          margin-top: 25px;
+          @include adaptive-font(24, 16);
         }
 
         .price {
@@ -149,8 +186,9 @@ h3 {
           margin: 40px 25px 35px;
           border: 4px solid $primary;
           box-sizing: border-box;
-          font-size: 24px;
           color: $primary;
+
+          @include adaptive-font(24, 12);
         }
 
         .subscribe-info {
@@ -159,6 +197,11 @@ h3 {
           text-align: center;
         }
       }
+  }
+
+  .plans-info {
+    @include adaptive-font(22, 12);
+    text-align: center;
   }
 
   .subscribe-1 {
@@ -173,65 +216,79 @@ h3 {
     background-image: url("../images/subscribe_3.png");
   }
 
-  .plans-info {
-    margin-top: 50px;
-    font-size: 22px;
-    text-align: center;
-  }
+
 
   .latest-news {
+
         h2 {
     text-align: center;
   }
 
         .news-item{
-          column-gap: 70px;
+
+          .news-image {
 
 
-          .news-title {
-            font-size: 30px;
+            img {
+              width: 100%;
+              max-width: 566px;
+            }
           }
 
-          .news-short {
-            margin-top: 25px;
-            line-height: 28px;
-            font-size: 14px;
-            color: $secondary;
-          }
+          .news-info {
+            max-width: 566px;
 
-          .news-about {
-            margin-top: 20px;
-            column-gap: 20px;
-            align-items: center;
+            .news-title {
+              font-size: 30px;
+            }
 
+            .news-short {
+              line-height: 28px;
+              font-size: 14px;
+              color: $secondary;
+            }
 
-            .category {
+            .news-about {
+              align-items: center;
+              width: 220px;
+
+              img {
+                width: 25px;
+                margin-right: 20px;
+              }
+
+              .category {
+                font-size: 12px;
+                color: #F89202;
+              }
+
+              .vertical-border {
+                height: 9px;
+                border: 1px solid #B8B8B8;
+                transform: rotate(180deg);
+
+              }
+
+              .date {
+                font-size: 12px;
+                color: #555555;
+              }
+
+            }
+
+            .news-button {
+              padding: 20px 30px;
+              background: inherit;
+              border: 1px solid #E9E9E9;
+              box-sizing: border-box;
+              color: #8C8C8C;
               font-size: 12px;
-              color: #F89202;
+              border-radius: 5px;
             }
 
-            .vertical-border {
-              height: 9px;
-              border: 1px solid #B8B8B8;
-              transform: rotate(180deg);
 
-            }
-
-            .date {
-              font-size: 12px;
-              color: #555555;
-            }
           }
 
-          .news-button {
-            margin-top: 50px;
-            padding: 20px 30px;
-            background: inherit;
-            border: 1px solid #E9E9E9;
-            box-sizing: border-box;
-            color: #8C8C8C;
-            font-size: 12px;
-          }
         }
   }
 
@@ -241,10 +298,12 @@ h3 {
     }
 
     .app-download {
+
       .app-description {
+        max-width: 566px;
         p {
           font-size: 16px;
-          height: 38px;
+
           color: $secondary;
         }
 
@@ -256,14 +315,26 @@ h3 {
           color: inherit;
         }
       }
+
+      .app-image {
+        max-width: 566px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+      }
     }
 
   }
 }
 footer {
-  padding: 80px 0 50px;
+  padding: 40px 20px 50px;
   color: $third;
 
+  .footer-menu {
+    align-items: start;
+    flex-wrap: wrap;
+  }
   .section-name {
     margin-bottom: 30px;
     font-size: 18px;
@@ -281,7 +352,7 @@ footer {
 }
 
 .footer-gradient {
-  width: 100%;
+  //width: 100%;
   height: auto;
   position: absolute;
   left: 0;
@@ -297,13 +368,93 @@ footer {
   color: #EEEEEE;
 }
 
-.footer-menu {
-  padding-top: 150px;
+.footer-menu-1 {
+  flex-wrap: wrap;
+  padding-top: 130px;
   font-size: 16px;
   color: $third;
+
 }
 
 .footer-center {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .main {
+    .pricing {
+      .plans {
+        justify-content: space-around;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    nav {
+      order: 3;
+    }
+  }
+
+
+  .main-banner {
+    margin-top: 46px;
+    margin-bottom: 40px;
+    .banner {
+      height: 738px;
+    }
+
+  }
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+
+}
+
+@media (max-width: 320px) {
+
+ .header {
+   align-items: start;
+
+   nav {
+     order: 3;
+
+     .menu {
+
+       flex-direction: column;
+       align-items: start;
+
+       li {
+         margin-bottom: 10px;
+       }
+     }
+   }
+ }
+
+  .news-button {
+    width: 100%;
+  }
+
+  .download-button {
+    width: 100%;
+  }
+
+  .footer-menu-1 {
+    flex-direction: column;
+    align-items: start;
+  }
 }
