@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet');
 /* Colors */
 ul, p, h1, h2, h3 {
@@ -8,10 +9,6 @@ ul, p, h1, h2, h3 {
 ul,
 ol {
   list-style: none;
-}
-
-ul,
-ol {
   padding: 0;
 }
 
@@ -24,109 +21,55 @@ select {
   color: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* grid */
-.col-1 {
-  grid-column: span 1;
-}
-
-.col-2 {
-  grid-column: span 2;
-}
-
-.col-3 {
-  grid-column: span 3;
-}
-
-.col-4 {
-  grid-column: span 4;
-}
-
-.col-5 {
-  grid-column: span 5;
-}
-
-.col-6 {
-  grid-column: span 6;
-}
-
-.col-7 {
-  grid-column: span 7;
-}
-
-.col-8 {
-  grid-column: span 8;
-}
-
-.col-9 {
-  grid-column: span 9;
-}
-
-.col-10 {
-  grid-column: span 10;
-}
-
-.col-11 {
-  grid-column: span 11;
-}
-
-.col-12 {
-  grid-column: span 12;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, max-content);
 }
 
-.grid-12 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
 /* column-gap 10-100px */
-.gap-10 {
-  grid-column-gap: 10px;
+.column-gap-10 {
+  column-gap: 10px;
 }
 
-.gap-20 {
-  grid-column-gap: 20px;
+.column-gap-20 {
+  column-gap: 20px;
 }
 
-.gap-30 {
-  grid-column-gap: 30px;
+.column-gap-30 {
+  column-gap: 30px;
 }
 
-.gap-40 {
-  grid-column-gap: 40px;
+.column-gap-40 {
+  column-gap: 40px;
 }
 
-.gap-50 {
-  grid-column-gap: 50px;
+.column-gap-50 {
+  column-gap: 50px;
 }
 
-.gap-60 {
-  grid-column-gap: 60px;
+.column-gap-60 {
+  column-gap: 60px;
 }
 
-.gap-70 {
-  grid-column-gap: 70px;
+.column-gap-70 {
+  column-gap: 70px;
 }
 
-.gap-80 {
-  grid-column-gap: 80px;
+.column-gap-80 {
+  column-gap: 80px;
 }
 
-.gap-90 {
-  grid-column-gap: 90px;
+.column-gap-90 {
+  column-gap: 90px;
 }
 
-.gap-100 {
-  grid-column-gap: 100px;
+.column-gap-100 {
+  column-gap: 100px;
 }
 
 .flex {
@@ -160,6 +103,10 @@ select {
 
 .align-center {
   align-items: center;
+}
+
+.align-start {
+  align-items: start;
 }
 
 /* Fonts */
@@ -252,6 +199,15 @@ select {
   margin-top: 100px;
 }
 
+/* Colors */
+.brown {
+  background: #95390C;
+}
+
+.violet {
+  background: #5328A1;
+}
+
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -311,12 +267,13 @@ body {
   text-transform: uppercase;
 }
 
-.main-banner {
+.main-top {
   margin-top: 210px;
   margin-bottom: 240px;
   text-align: center;
 }
-.main-banner .banner {
+
+.main-banner {
   position: absolute;
   top: 0;
   left: 0;
@@ -326,20 +283,24 @@ body {
   background: url(../images/banner.png) no-repeat center;
   background-size: cover;
 }
-.main-banner h1 {
+
+h1 {
   font-size: calc(30px + 30 * ((100vw - 320px) / 1600));
 }
-.main-banner h3 {
+
+h3 {
   font-size: calc(18px + 12 * ((100vw - 320px) / 1600));
 }
-.main-banner .caption-3 {
+
+.caption-3 {
   font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
 }
-.main-banner .form {
+
+.form {
   flex-wrap: wrap;
   max-width: 570px;
 }
-.main-banner .form input {
+.form input {
   margin-bottom: 30px;
   flex-shrink: 1;
   flex-basis: 270px;
@@ -351,11 +312,11 @@ body {
   padding-left: 20px;
   box-sizing: border-box;
 }
-.main-banner .form input::placeholder {
+.form input::placeholder {
   font-size: 14px;
   color: #FFFFFF;
 }
-.main-banner .form .button {
+.form .button {
   flex-grow: 1;
   min-width: 280px;
   height: 56px;
@@ -514,6 +475,7 @@ footer li {
 }
 
 .footer-gradient {
+  width: 100%;
   height: auto;
   position: absolute;
   left: 0;
@@ -541,6 +503,105 @@ footer li {
   margin: 0 auto;
 }
 
+.catalog-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  min-width: 100%;
+  height: 550px;
+  background: url("../images/Morten Harket.png") no-repeat center;
+  background-size: cover;
+}
+
+.сatalog-top {
+  margin-top: 240px;
+}
+
+.buttons {
+  width: 100%;
+  max-width: 435px;
+  column-gap: 35px;
+  row-gap: 20px;
+}
+.buttons .btn {
+  max-width: 280px;
+  display: flex;
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 56px;
+  font-weight: normal;
+  border-radius: 5px;
+  align-items: center;
+}
+.buttons .btn img {
+  width: 16px;
+  margin: 19px;
+}
+
+.popular {
+  row-gap: 25px;
+  column-gap: 70px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  flex-wrap: wrap;
+}
+.popular h2 {
+  display: flex;
+  justify-content: start;
+}
+.popular .popular-item .track-info {
+  column-gap: 16px;
+}
+.popular .popular-item .track-info .track-wrapper {
+  row-gap: 5px;
+  align-items: flex-start;
+}
+.popular .popular-item .track-info .track-wrapper .group-name {
+  font-size: 12px;
+  color: #808080;
+}
+.popular .popular-item .duration {
+  font-size: 14px;
+  color: #808080;
+}
+
+.discography, .related {
+  gap: 50px;
+}
+
+.band-item {
+  row-gap: 10px;
+}
+.band-item .band-image {
+  max-width: 250px;
+  max-height: 250px;
+}
+.band-item .band-image .album {
+  width: 250px;
+}
+.band-item .band-image .play-button {
+  width: 25px;
+  position: relative;
+  top: -38px;
+  left: 15px;
+}
+.band-item .band-name {
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
+}
+.band-item .discography-year {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+}
+.band-item .related-followers {
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1600));
+}
+
+.followers {
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+}
+
 @media (max-width: 1280px) {
   .main .pricing .plans {
     justify-content: space-around;
@@ -551,12 +612,53 @@ footer li {
     order: 3;
   }
 
-  .main-banner {
+  .main-top {
     margin-top: 46px;
     margin-bottom: 40px;
   }
-  .main-banner .banner {
+  .main-top .banner {
     height: 738px;
+  }
+
+  .catalog-banner {
+    height: 630px;
+  }
+
+  .popular {
+    height: auto;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 425px) {
+  .discography, .related {
+    align-items: start;
+    column-gap: 20px;
+  }
+
+  .band-item {
+    row-gap: 10px;
+  }
+  .band-item .band-image {
+    max-width: 130px;
+    max-height: 130px;
+  }
+  .band-item .band-image .album {
+    width: 130px;
+  }
+  .band-item .band-image .play-button {
+    width: 15px;
+    position: relative;
+    top: -23px;
+    left: 5px;
+  }
+
+  .discography .band-name {
+    width: 100px;
+  }
+
+  .related-followers {
+    width: 130px;
+    text-align: center;
   }
 }
 @media (max-width: 320px) {
@@ -585,6 +687,10 @@ footer li {
   .footer-menu-1 {
     flex-direction: column;
     align-items: start;
+  }
+
+  .сatalog-top {
+    margin-top: 100px;
   }
 }
 

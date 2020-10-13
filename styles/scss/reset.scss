@@ -3,16 +3,12 @@ ul,p, h1, h2, h3 {
   margin: 0;
 }
 
-
 ul,
 ol {
   list-style: none;
-}
-
-ul,
-ol {
   padding: 0;
 }
+
 a,
 input,
 button,
@@ -20,4 +16,7 @@ textarea,
 select {
   font: inherit;
   color: inherit;
+}
+a {
+  text-decoration: none;
 }
