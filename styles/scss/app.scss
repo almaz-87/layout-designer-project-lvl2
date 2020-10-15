@@ -279,6 +279,7 @@ body {
             }
 
             .news-button {
+
               padding: 20px 30px;
               background: inherit;
               border: 1px solid #E9E9E9;
@@ -330,7 +331,7 @@ body {
   }
 }
 footer {
-  padding: 40px 20px 50px;
+  padding: 40px 0 50px;
   color: $third;
 
   .footer-menu {
@@ -426,7 +427,7 @@ footer {
   }
 }
 
-.popular {
+.popular-wrapper {
   row-gap: 25px;
   column-gap: 70px;
   display: flex;
@@ -450,11 +451,10 @@ footer {
         align-items: flex-start;
 
         .track-name {
-
+          font-size: 14px;
         }
 
         .group-name {
-
           font-size: 12px;
           color: $fourth;
         }
@@ -471,7 +471,7 @@ footer {
 }
 
 
-.discography, .related {
+.discography-wrapper, .related-wrapper {
   gap: 50px;
 }
 
@@ -553,7 +553,7 @@ footer {
     height: 630px;
   }
 
-  .popular {
+  .popular-wrapper {
     height: auto;
     flex-wrap: nowrap;
   }
@@ -565,7 +565,7 @@ footer {
 
 
 @media (max-width: 425px) {
-  .discography, .related {
+  .discography-wrapper, .related-wrapper {
     align-items: start;
     column-gap: 20px;
   }
@@ -591,7 +591,7 @@ footer {
     }
   }
 
-  .discography .band-name {
+  .discography-wrapper .band-name {
     width: 100px;
   }
 

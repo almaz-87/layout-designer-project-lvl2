@@ -456,7 +456,7 @@ h3 {
 }
 
 footer {
-  padding: 40px 20px 50px;
+  padding: 40px 0 50px;
   color: #CACACA;
 }
 footer .footer-menu {
@@ -540,7 +540,7 @@ footer li {
   margin: 19px;
 }
 
-.popular {
+.popular-wrapper {
   row-gap: 25px;
   column-gap: 70px;
   display: flex;
@@ -548,27 +548,30 @@ footer li {
   height: 200px;
   flex-wrap: wrap;
 }
-.popular h2 {
+.popular-wrapper h2 {
   display: flex;
   justify-content: start;
 }
-.popular .popular-item .track-info {
+.popular-wrapper .popular-item .track-info {
   column-gap: 16px;
 }
-.popular .popular-item .track-info .track-wrapper {
+.popular-wrapper .popular-item .track-info .track-wrapper {
   row-gap: 5px;
   align-items: flex-start;
 }
-.popular .popular-item .track-info .track-wrapper .group-name {
+.popular-wrapper .popular-item .track-info .track-wrapper .track-name {
+  font-size: 14px;
+}
+.popular-wrapper .popular-item .track-info .track-wrapper .group-name {
   font-size: 12px;
   color: #808080;
 }
-.popular .popular-item .duration {
+.popular-wrapper .popular-item .duration {
   font-size: 14px;
   color: #808080;
 }
 
-.discography, .related {
+.discography-wrapper, .related-wrapper {
   gap: 50px;
 }
 
@@ -624,13 +627,13 @@ footer li {
     height: 630px;
   }
 
-  .popular {
+  .popular-wrapper {
     height: auto;
     flex-wrap: nowrap;
   }
 }
 @media (max-width: 425px) {
-  .discography, .related {
+  .discography-wrapper, .related-wrapper {
     align-items: start;
     column-gap: 20px;
   }
@@ -652,7 +655,7 @@ footer li {
     left: 5px;
   }
 
-  .discography .band-name {
+  .discography-wrapper .band-name {
     width: 100px;
   }
 
