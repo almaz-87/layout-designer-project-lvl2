@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'reset';
 @import 'atomic.scss';
+@import 'menu-horizontal.scss';
 
 body {
   max-width: 1200px;
@@ -33,27 +34,13 @@ body {
 
   }
 
-  nav {
+  .header-menu {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 450px;
+    color: $fourth;
 
     margin-bottom: 20px;
-
-    .menu {
-      flex-wrap: wrap;
-
-      li {
-        color: $fourth;
-        margin-right: 50px;
-
-
-
-        &.active {
-          color: $primary;
-        }
-      }
-    }
   }
  .search-form {
    margin-bottom: 20px;
@@ -100,7 +87,7 @@ body {
     @include adaptive-font(60, 30);
   }
 
-  h3 {
+  .subtitle {
     @include adaptive-font(30, 18);
   }
 
@@ -337,21 +324,15 @@ footer {
   .footer-menu {
     align-items: start;
     flex-wrap: wrap;
+
+    li {
+      margin-top: 20px;
+    }
   }
   .section-name {
     margin-bottom: 30px;
     font-size: 18px;
   }
-
-  ul {
-    font-size: 16px;
-
-  }
-
-  li {
-    margin-top: 20px;
-  }
-
 }
 
 .footer-gradient {
@@ -372,17 +353,11 @@ footer {
   color: #EEEEEE;
 }
 
-.footer-menu-1 {
-  flex-wrap: wrap;
-  padding-top: 130px;
-  font-size: 16px;
-  color: $third;
-
-}
-
 .footer-center {
   max-width: 1200px;
   margin: 0 auto;
+  color: $third;
+  font-size: 16px;
 }
 
 
@@ -534,7 +509,7 @@ footer {
 
 @media (max-width: 768px) {
   .header {
-    nav {
+    .header-menu {
       order: 3;
     }
   }
@@ -611,18 +586,8 @@ footer {
  .header {
    align-items: start;
 
-   nav {
+   .header-menu {
      order: 3;
-
-     .menu {
-
-       flex-direction: column;
-       align-items: start;
-
-       li {
-         margin-bottom: 10px;
-       }
-     }
    }
  }
 
@@ -634,17 +599,11 @@ footer {
     width: 100%;
   }
 
-  .footer-menu-1 {
-    flex-direction: column;
-    align-items: start;
-  }
-
-
-
   .сatalog-top {
     margin-top: 100px;
   }
+}
 
-
-
+a:hover, button:hover {
+    opacity: 0.5;
 }
