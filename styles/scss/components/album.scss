@@ -1,0 +1,56 @@
+.album-item {
+  row-gap: 10px;
+
+  .band-image {
+
+    max-width: 250px;
+    max-height: 250px;
+    .album {
+      width: 250px;
+    }
+
+    .play-button {
+      width: 25px;
+      position: relative;
+      top: -38px;
+      left: 15px;
+
+    }
+
+  }
+
+  .band-name {
+    @include adaptive-font(20, 16);
+  }
+
+  .discography-year {
+    @include adaptive-font(16, 14);
+  }
+
+  .related-followers {
+    @include adaptive-font(16, 12);
+  }
+}
+
+@media (max-width: 425px) {
+  .album-item {
+    row-gap: 10px;
+
+    .band-image {
+
+      max-width: 130px;
+      max-height: 130px;
+      .album {
+        width: 130px;
+      }
+
+      .play-button {
+        width: 15px;
+        position: relative;
+        top: -23px;
+        left: 5px;
+
+      }
+    }
+  }
+}

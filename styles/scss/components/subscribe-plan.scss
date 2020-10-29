@@ -1,0 +1,39 @@
+.subscribe-plan {
+  flex: 0 1;
+
+  .plan-name {
+    @include adaptive-font(24, 16);
+  }
+
+  .price {
+    line-height: 0.9;
+    align-items: start;
+    margin-top: 220px;
+
+    .price-sum{
+      font-size: 60px;
+    }
+
+    .currency {
+      margin-left: 10px;
+      font-size: 30px;
+    }
+  }
+
+  .subscribe-button {
+    padding: 20px 80px;
+    text-decoration: none;
+    margin: 40px 25px 35px;
+    border: 4px solid $primary;
+    box-sizing: border-box;
+    color: $primary;
+
+    @include adaptive-font(24, 12);
+  }
+
+  .subscribe-info {
+    margin: 0 24px 60px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
