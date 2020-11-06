@@ -83,11 +83,18 @@ $maxWidth: 1920;
   text-transform: uppercase;
 }
 
-/* margin-top 5-100px */
-@for $i from 1 through 30 {
+/* margin-top 5-250px */
+@for $i from 1 through 50 {
     .mt-#{$i*5} {
       margin-top: $i*5px;
     }
+}
+
+/* margin-bottom 5-150px */
+@for $i from 1 through 30 {
+  .mb-#{$i*5} {
+    margin-bottom: $i*5px;
+  }
 }
 
 /* Colors */

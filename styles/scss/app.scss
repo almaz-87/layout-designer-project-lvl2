@@ -7,9 +7,7 @@
 @import 'components/album';
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 20px 50px;
   background: $background;
   color: $primary;
   font-family: $font-family;
@@ -19,13 +17,15 @@ body {
 
 }
 
-.header {
+.menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   flex-wrap: wrap;
 
   .logo {
     flex-basis: 200px;
     flex-shrink: 1;
-    margin-bottom: 20px;
 
     img {
       margin-right: 5px;
@@ -38,16 +38,9 @@ body {
   }
 
   .header-menu {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 450px;
+    flex: 1 1 450px;
     color: $fourth;
-
-    margin-bottom: 20px;
   }
- .search-form {
-   margin-bottom: 20px;
-
    .search {
      width: 280px;
      height: 25px;
@@ -63,26 +56,19 @@ body {
      }
 
    }
- }
 }
 
-.main-top {
-  margin-top: 210px;
-  margin-bottom: 240px;
+.header {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
   text-align: center;
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  width: auto;
 
 }
-
-  .main-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -100;
-    min-width: 100%;
-    height: 877px;
-    background: url(../images/banner.png) no-repeat center;
-    background-size: cover;
-  }
 
   h1 {
     @include adaptive-font(60, 30);
@@ -102,10 +88,7 @@ body {
 
 
     input {
-      margin-bottom: 30px;
-      flex-shrink: 1;
-      flex-basis: 270px;
-      flex-grow: 1;
+      flex: 1 1 270px;
       height: 50px;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid rgba(255, 255, 255, 0.1);
@@ -119,7 +102,6 @@ body {
       }
     }
 
-
     .button {
       flex-grow: 1;
       min-width: 280px;
@@ -132,9 +114,23 @@ body {
   }
 
 
+.subscribe-1 {
+  background-image: url("../images/subscribe_1.png");
+}
 
+.subscribe-2 {
+  background-image: url("../images/subscribe_2.png");
+}
+
+.subscribe-3 {
+  background-image: url("../images/subscribe_3.png");
+}
 
 .main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   height: auto;
 
   h2 {
@@ -145,26 +141,12 @@ body {
     width: 100%;
     flex-wrap: wrap;
 
-
   }
 
   .plans-info {
     @include adaptive-font(22, 12);
     text-align: center;
   }
-
-  .subscribe-1 {
-    background-image: url("../images/subscribe_1.png");
-  }
-
-  .subscribe-2 {
-    background-image: url("../images/subscribe_2.png");
-  }
-
-  .subscribe-3 {
-    background-image: url("../images/subscribe_3.png");
-  }
-
 
 
   .latest-news {
@@ -173,73 +155,64 @@ body {
     text-align: center;
   }
 
-        .news-item{
+  }
 
-          .news-image {
+  .news-image {
+    img {
+      width: 100%;
+      max-width: 566px;
+    }
+  }
 
+  .news-info {
+    max-width: 566px;
 
-            img {
-              width: 100%;
-              max-width: 566px;
-            }
-          }
+    .news-title {
+      font-size: 30px;
+    }
 
-          .news-info {
-            max-width: 566px;
+    .news-short {
+      line-height: 28px;
+      font-size: 14px;
+      color: $secondary;
+    }
 
-            .news-title {
-              font-size: 30px;
-            }
+    .news-about {
+      align-items: center;
+      width: 220px;
 
-            .news-short {
-              line-height: 28px;
-              font-size: 14px;
-              color: $secondary;
-            }
+      img {
+        width: 25px;
+        margin-right: 20px;
+      }
 
-            .news-about {
-              align-items: center;
-              width: 220px;
+      .category {
+        font-size: 12px;
+        color: #F89202;
+      }
 
-              img {
-                width: 25px;
-                margin-right: 20px;
-              }
+      .vertical-border {
+        height: 9px;
+        border: 1px solid #B8B8B8;
+      }
 
-              .category {
-                font-size: 12px;
-                color: #F89202;
-              }
+      .date {
+        font-size: 12px;
+        color: #555555;
+      }
 
-              .vertical-border {
-                height: 9px;
-                border: 1px solid #B8B8B8;
-                transform: rotate(180deg);
+    }
 
-              }
+    .news-button {
 
-              .date {
-                font-size: 12px;
-                color: #555555;
-              }
-
-            }
-
-            .news-button {
-
-              padding: 20px 30px;
-              background: inherit;
-              border: 1px solid #E9E9E9;
-              box-sizing: border-box;
-              color: #8C8C8C;
-              font-size: 12px;
-              border-radius: 5px;
-            }
-
-
-          }
-
-        }
+      padding: 20px 30px;
+      background: inherit;
+      border: 1px solid #E9E9E9;
+      box-sizing: border-box;
+      color: #8C8C8C;
+      font-size: 12px;
+      border-radius: 5px;
+    }
   }
 
   .mobile-app {
@@ -277,9 +250,11 @@ body {
 
   }
 }
-footer {
-  padding: 40px 0 50px;
-  color: $third;
+
+
+.footer {
+  width: 100%;
+  background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
 
   .footer-menu {
     align-items: start;
@@ -295,16 +270,6 @@ footer {
   }
 }
 
-.footer-gradient {
-  width: 100%;
-
-  height: auto;
-  position: absolute;
-  left: 0;
-  z-index: -100;
-  background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
-}
-
 .footer-line {
   position: absolute;
   left: 0;
@@ -318,6 +283,8 @@ footer {
   margin: 0 auto;
   color: $third;
   font-size: 16px;
+  padding: 40px 20px 50px;
+  color: $third;
 }
 
 
@@ -386,13 +353,8 @@ footer {
 //////////////////
 
 @media (max-width: 1280px) {
-  .main {
-    .pricing {
-      .plans {
-        justify-content: space-around;
-      }
-    }
-
+  .plans {
+    justify-content: space-around;
   }
 }
 
@@ -402,20 +364,8 @@ footer {
 
 
 @media (max-width: 768px) {
-  .header {
-    .header-menu {
-      order: 3;
-    }
-  }
-
-
-  .main-top {
-    margin-top: 46px;
-    margin-bottom: 40px;
-    .banner {
-      height: 738px;
-    }
-
+  .header-menu {
+    order: 3;
   }
 
   .catalog-banner{
@@ -453,13 +403,13 @@ footer {
 
 @media (max-width: 320px) {
 
- .header {
+ .menu {
    align-items: start;
-
-   .header-menu {
-     order: 3;
-   }
  }
+
+  .header-menu {
+    order: 3;
+  }
 
   .news-button {
     width: 100%;
@@ -467,10 +417,6 @@ footer {
 
   .download-button {
     width: 100%;
-  }
-
-  .сatalog-top {
-    margin-top: 100px;
   }
 }
 
