@@ -8,34 +8,35 @@
     <title>Портал «Music Box»| abu_maryam</title>
 </head>
 <body>
-    <header class="header uppercase flex jc-sb bold">
-    <div class="logo flex mb-20">
-        <a href="index.html"><img src="images/logo.svg" width="20" alt="Logo"></a>
-        <a href="index.html">Music Box</a>
-    </div>
-
-    <nav class="header-menu mb-20">
-        <ul class="menu-horizontal color-fourth row-gap-30">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li class="active"><a href="catalog.html">Исполнители</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-    </nav>
-    <div class="search-form mb-20">
-        <input type="search" placeholder="Поиск..." class="search">
-    </div>
-</header>
-
-    <section class="сatalog-top flex flex-column align-start bold mt-100">
-        <div class="catalog-banner"></div>
-        <h1 class="uppercase">Morten Harket</h1>
-        <div class="followers  mt-25">24 875 поклонников</div>
-        <div class="buttons flex flex-wrap jc-sb mt-40" >
-            <a class="btn uppercase violet" href="#"><img src="images/play-button.svg" alt="Play button">Микс</a>
-            <a class="btn brown uppercase" href="#"><img src="images/heart.svg" alt="Heart">В избранное</a>
+    <header class="header catalog-banner flex flex-column">
+        <div class="flex flex-column align-start w1200">
+            <div class="menu uppercase flex jc-sb bold">
+                <div class="logo flex mb-20">
+                    <a href="index.html"><img src="images/logo.svg" width="20" alt="Logo"></a>
+                    <a href="index.html">Music Box</a>
+                </div>
+                <nav class="header-menu mb-20">
+                    <ul class="menu-horizontal color-fourth row-gap-30">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li class="active"><a href="catalog.html">Исполнители</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="search-form mb-20">
+                    <input type="search" placeholder="Поиск..." class="search">
+                </div>
+            </div>
+            <div class="catalog-top flex flex-column align-start bold">
+                <h1 class="uppercase">Morten Harket</h1>
+                <div class="followers  mt-25">24 875 поклонников</div>
+                <div class="buttons flex flex-wrap jc-sb mt-40" >
+                    <a class="btn uppercase violet" href="#"><img src="images/play-button.svg" alt="Play button">Микс</a>
+                    <a class="btn brown uppercase" href="#"><img src="images/heart.svg" alt="Heart">В избранное</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
     <main class="main">
         <section class="popular mt-100">
@@ -240,8 +241,7 @@
 
     </main>
 
-
-    <footer class="footer-gradient mt-100">
+    <footer class="footer mt-100">
         <div class="footer-center">
             <div class="footer-menu flex column-gap-100">
                 <div class="mt-40">
@@ -282,7 +282,7 @@
             </div>
             <hr class="footer-line mt-100">
             <nav class="mt-130 row-gap-30">
-                <ul class="menu-horizontal">
+                <ul class="menu-horizontal row-gap-20">
                     <li><a href="#">Магазин</a></li>
                     <li><a href="#">Обслуживание</a></li>
                     <li><a href="#">Блог</a></li>
