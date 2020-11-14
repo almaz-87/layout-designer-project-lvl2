@@ -22,41 +22,41 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-
-
-  .logo {
-    flex-basis: 200px;
-    flex-shrink: 1;
-
-    img {
-      margin-right: 5px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-  }
-
-  .header-menu {
-    flex: 1 1 450px;
-    color: $fourth;
-  }
-   .search {
-     width: 280px;
-     height: 25px;
-     border-width: 0;
-     border-radius: 50px;
-     background: #3C3B3D;
-     transform: matrix(1, 0, 0, 1, 0, 0);
-     padding-left: 15px;
-
-     &::placeholder {
-       color: $secondary;
-       text-transform: uppercase;
-     }
-   }
 }
+
+.logo {
+  flex: 0 1 200px;
+
+  img {
+    margin-right: 5px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.header-menu {
+  flex: 1 1 450px;
+  color: $fourth;
+}
+
+.search {
+ width: 280px;
+ height: 25px;
+ border-width: 0;
+ border-radius: 50px;
+ background: #3C3B3D;
+ transform: matrix(1, 0, 0, 1, 0, 0);
+ padding-left: 15px;
+
+ &::placeholder {
+   color: $secondary;
+   text-transform: uppercase;
+ }
+}
+
 
 .header {
   height: 100%;
@@ -114,7 +114,6 @@ body {
     flex-wrap: wrap;
     max-width: 570px;
 
-
     input {
       flex: 1 1 270px;
       height: 50px;
@@ -169,7 +168,6 @@ body {
 .plans {
   width: 100%;
   flex-wrap: wrap;
-
 }
 
 .plans-info {
@@ -177,17 +175,13 @@ body {
   text-align: center;
 }
 
-.latest-news {
-        h2 {
+.latest-news h2 {
     text-align: center;
-  }
 }
 
-.news-image {
-  img {
+.news-image img {
     width: 100%;
     max-width: 566px;
-  }
 }
 
 .news-info {
@@ -241,10 +235,8 @@ body {
   }
 }
 
-.mobile-app {
-  h2 {
+.mobile-app h2 {
     text-align: center;
-  }
 }
 
 .app-description {
@@ -272,19 +264,14 @@ body {
 .footer {
   width: 100%;
   background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
+}
 
-  .footer-menu {
-    align-items: start;
-    flex-wrap: wrap;
+.footer-menu li {
+  margin-top: 20px;
+}
 
-    li {
-      margin-top: 20px;
-    }
-  }
-  .section-name {
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
+.section-name {
+  font-size: 18px;
 }
 
 .footer-line {
@@ -303,7 +290,6 @@ body {
   padding: 40px 20px 50px;
 }
 
-
 .buttons {
   width: 100%;
   max-width: 435px;
@@ -313,9 +299,7 @@ body {
   .btn {
     max-width: 280px;
     display: flex;
-    flex-basis: 200px;
-    flex-shrink: 1;
-    flex-grow: 1;
+    flex: 1 1 200px;
 
 
     height: 56px;
@@ -339,13 +323,9 @@ body {
   flex-wrap: wrap;
 }
 
-
 .discography-wrapper, .related-wrapper {
   gap: 50px;
 }
-
-
-
 
 .followers {
   @include adaptive-font(18, 14);
@@ -361,7 +341,6 @@ body {
 
 }
 
-
 @media (max-width: 768px) {
   .header-menu {
     order: 3;
@@ -373,7 +352,6 @@ body {
   }
 
 }
-
 
 @media (max-width: 425px) {
   .discography-wrapper, .related-wrapper {
